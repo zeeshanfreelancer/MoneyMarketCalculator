@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./pages/home/home.css"
+import "./pages/Home/home.css";
 
 const SearchNavigator = () => {
   const navigate = useNavigate();
