@@ -1,0 +1,159 @@
+.calculator-card {
+  background: rgb(240, 240, 240);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid gray;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  margin: 20px 40px; /* <-- Left aligned (remove auto centering) */
+}
+
+/* Currency Buttons Container */
+.currencyBg {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 45px;
+  border: 1px solid grey;
+  border-radius: 8px;
+  box-shadow: inset 0 6px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+/* Currency Buttons */
+.currencybtns {
+  flex: 1;
+  height: 100%;
+  color: rgb(0, 0, 0);
+  outline: none;
+  border: none;
+  border-right: 1px solid black;
+  background-color: transparent;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.currencybtns:last-child {
+  border-right: none;
+}
+.currencybtns.active {
+  background-color: #FDBB2D;
+  color: #fff;
+}
+.currencybtns:hover {
+  background-color: rgb(64, 63, 63);
+  color: #fff;
+}
+
+/* Inputs Group */
+.input-group,
+.inputdiv {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.input-group label {
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+.inputdata,
+select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 100%;
+  outline: none;
+}
+
+/* Combined Currency + Input */
+.inputdiv {
+  flex-direction: row;
+  border: 1px solid #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.activebtnCurrency {
+  border: none;
+  outline: none;
+  width: 50px;
+  background-color: #eee;
+  font-weight: bold;
+}
+
+/* Checkbox */
+label input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* Calculate Button */
+.calc-btn {
+  margin-top: 20px;
+  background-color: #1bb467;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+.calc-btn:hover {
+  background-color: #d99a00;
+}
+
+/* Results Section */
+.allresults {
+  background-color: white;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid rgb(216, 213, 213);
+  border-radius: 8px;
+}
+.allresults h1 {
+  margin-bottom: 10px;
+}
+.allresults h6 {
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+
+/* Tabs (if needed for multiple calculators) */
+.calbtnback {
+  background-color: #ddd;
+  width: 160px;
+  height: 50px;
+  border-radius: 10px;
+  padding: 2px;
+  margin-bottom: 10px;
+}
+.calbtns {
+  width: 100%;
+  height: 100%;
+  color: white;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 2px;
+  background-color: rgb(89, 97, 105);
+  transition: background-color 0.3s ease;
+}
+.calbtns.active {
+  background-color: rgb(255, 123, 0);
+}
+.calbtns:hover {
+  background-color: rgb(64, 63, 63);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .calculator-card {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+  .calbtnback {
+    width: 100%;
+  }
+}

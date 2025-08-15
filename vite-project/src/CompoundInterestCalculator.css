@@ -1,0 +1,245 @@
+.calculator-card {
+  background: rgb(240, 240, 240);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid gray;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  max-width: 400px;
+  width: 100%;
+  margin: 20px 0px;
+  margin-right: 40px;
+  
+}
+
+
+.currencyBg{
+  width: 100%;
+  display: flex;
+  flex-direction: 1 column;
+  justify-content: space-between;
+  height: 45px;
+  border: 1px solid grey;
+  border-radius: 10px;
+ box-shadow: inset 0 6px 15px rgba(0, 0, 0, 0.1);
+
+  
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-top: 10px;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+.input-group input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.calc-btn {
+  margin-top: 20px;
+  background-color: #1bb467;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-items:flex-end;
+}
+
+.calc-btn:hover {
+  background-color: #d99a00;
+}
+
+.result {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: 1 column;
+ justify-content: space-between;
+  padding: 1rem;
+  border-radius: 8px;
+  padding-right: 10%;
+  border-bottom: 1px solid rgb(216, 213, 213);
+  padding-bottom: 20px ;
+}
+
+.calbtnback{
+  background-color: #ddd;
+  width: 160px;
+  height: 50px;
+  border-radius: 10px;
+  padding: 2px;
+}
+
+.calbtns {
+  width: 100%;
+  height: 100%;
+  color: white;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 2px;
+  background-color: rgb(89, 97, 105); /* default for inactive buttons */
+  transition: background-color 0.3s ease;
+}
+
+.calbtns.active {
+  background-color: rgb(255, 123, 0); /* active button */
+}
+.calbtns.active:hover {
+  background-color: rgb(255, 123, 0); /* active button */
+}
+
+.calbtns:hover {
+  background-color: rgb(64, 63, 63);
+}
+
+.currencyBg{
+  width: 100%;
+  display: flex;
+  flex-direction: 1 column;
+  justify-content: space-between;
+  height: 45px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  
+ box-shadow: inset 0 6px 15px rgba(0, 0, 0, 0.1);
+
+  
+}
+
+
+.currencybtns {
+  width: 100%;
+  height: 100%;
+  color: rgb(0, 0, 0);
+  outline: none;
+  border: none;
+  border-right: 1px solid black;
+  background-color: rgba(89, 97, 105, 0); /* default for inactive buttons */
+  transition: background-color 0.3s ease;
+}
+
+.currencybtns.active {
+  background-color: rgb(255, 123, 0); /* active button */
+}
+.currencybtns.active:hover {
+  background-color: rgb(255, 123, 0); /* active button */
+}
+
+.currencybtns:hover {
+  background-color: rgb(64, 63, 63);
+}
+
+.inputdiv{
+  width: 100%;
+  justify-content: space-between;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: 1 column;
+}
+
+.inputdata{
+  width: 100%;
+  outline: none;
+ 
+}
+.activebtnCurrency{
+  border: none;
+  outline: none;
+  width: 50px;
+}
+
+.allresults{
+  background-color: white;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px 30px;
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid rgb(216, 213, 213);
+  
+ 
+
+
+}
+
+/* .calbtns{
+  background-color: rgb(255, 123, 0);
+  width: 100%;
+  height: 100%;
+  color: white;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 2px;
+}
+.calbtns:hover{
+  background-color: rgb(64, 63, 63);
+} */
+
+.cic{
+  display: flex;
+  flex-direction: 1 column;
+ 
+}
+
+
+@media (max-width: 768px) {
+  
+  .cic{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .calculator-card {
+    max-width: 100%;
+    margin: 10px auto;
+    padding: 1rem;
+  }
+
+  /* Make currency buttons wrap */
+  .currencyBg {
+    display: none;
+  }
+
+  .currencybtns {
+    flex: 1 1 50px;
+    min-width: 50px;
+    height: 40px;
+    font-size: 14px;
+    border-right: 1px solid black;
+  }
+  .currencybtns:last-child {
+    border-right: none;
+  }
+
+  /* Stack input + currency vertically */
+  .inputdiv {
+    flex-direction: column;
+    border-radius: 8px;
+  }
+
+  .activebtnCurrency {
+    width: 100%;
+    border-bottom: 1px solid #000;
+  }
+
+  /* Make results full width */
+  .allresults {
+    padding: 20px;
+  }
+
+  /* Full-width tab buttons */
+  .calbtnback {
+    width: 100%;
+    height: auto;
+  }
+}

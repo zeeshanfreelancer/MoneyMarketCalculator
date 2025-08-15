@@ -1,0 +1,104 @@
+.container {
+  background-color: grey;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: 1 column;
+  justify-content: space-between;
+  
+}
+
+.custom-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Adds space between dropdown links */
+}
+
+/* Line between dropdown toggles (optional) */
+.custom-nav .nav-item {
+  position: relative;
+}
+
+/* Add vertical line between dropdowns except the last one */
+.custom-nav .nav-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  border-right: 1px solid #ccc;
+}
+
+/* Default dropdown toggle link */
+.custom-nav .nav-link {
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 8px 12px;
+
+}
+
+/* Hover + focus on dropdown toggle */
+.custom-nav .nav-link:hover,
+.custom-nav .nav-link:focus {
+  background-color: rgb(44, 179, 125);
+  color: white;
+}
+
+/* When dropdown is open */
+.custom-nav .show > .nav-link {
+  background-color: rgb(44, 179, 125);
+  color: white;
+}
+
+/* Dropdown menu style */
+.custom-nav .dropdown-menu.show {
+  background-color: #f0f0f0;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Dropdown item */
+.custom-nav .dropdown-item {
+  color: #000000;
+}
+
+.custom-nav .dropdown-item:hover,
+.custom-nav .dropdown-item:focus {
+  background-color: #ddd;
+  color: #000;
+}
+
+
+
+
+
+/* Mobile responsive overrides */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* stack items vertically */
+    align-items: center; /* align left for mobile */
+    padding: 10px;
+  }
+
+  .custom-nav {
+    flex-direction: column; /* vertical menu */
+    gap: 10px; /* smaller gap */
+    width: 100%; /* take full width */
+  }
+
+  .custom-nav .nav-item {
+    width: 100%;
+  }
+
+  .custom-nav .nav-link {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  /* Remove vertical separators on mobile */
+  .custom-nav .nav-item:not(:last-child)::after {
+    content: none;
+  }
+}
