@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Finance from './pages/Finance'
 import Header from './pages/Header'
-import "./app.css"
 import Footer from './pages/Footer/Footer'
 import CompoundInterestCalculator from './CompoundInterestCalculator'
 import SimpleInterestCalculator from './pages/calculator/SimpleInterestCalculator'
